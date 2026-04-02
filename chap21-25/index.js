@@ -215,19 +215,211 @@
 
 // solution 2
 
-let userName = prompt("Enter Username");
-let specialSymbols = ["@", ".", ",", "!"]  // Hamari banned list
-let hasSpecialChar = false;
+// let userName = prompt("Enter Username");
+// let specialSymbols = ["@", ".", ",", "!"]  // Hamari banned list
+// let hasSpecialChar = false;
 
-for (let i=0 ; i< userName.length; i++){
-   if(specialSymbols.includes(userName[i])){
-    hasSpecialChar = true;
-    break;
-   }
-}
+// for (let i=0 ; i< userName.length; i++){
+//    if(specialSymbols.includes(userName[i])){
+//     hasSpecialChar = true;
+//     break;
+//    }
+// }
 
-if (hasSpecialChar){
-    alert("Please enter a valid username without @, ., , or !")
-}else{
-    alert("Username saved: " + userName);
+// if (hasSpecialChar){
+//     alert("Please enter a valid username without @, ., , or !")
+// }else{
+//     alert("Username saved: " + userName);
+// }
+
+// 10. Write a program that takes user input. Convert and 
+// show the input in capital letters. 
+
+// let userName =prompt("Enter your name");
+// let output = userName.toUpperCase();
+
+// alert(output);
+// __________________________________________
+// 14. You have an array 
+// A = [cake”, “apple pie”, “cookie”, “chips”, “patties”] 
+// Write a program to enable “search by user input” in an 
+// array. After searching, prompt the user whether the given 
+// item is found in the list or not. 
+// Note: Perform case insensitive search. Whether the user 
+// enters cookie, Cookie, COOKIE or coOkIE, program 
+// should inform about its availability. Example:
+
+
+// let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+// let userInput = prompt(`Welcome to ABC Bakery. What do you want to order sir/ma'am?
+//     1. cake
+//     2.apple pie 
+//     3.cookie
+//     4.chips
+//     5.patties
+    
+//     `);
+// let searchItem = userInput.toLowerCase();
+// let foundIndex = -1;
+
+
+// for (let i=0; i<A.length ; i++){
+// if (A[i].toLowerCase() == searchItem){
+//    foundIndex = i;
+//    break;
+// }
+// }
+// if (foundIndex !== -1){
+// alert(userInput + " is available at index " + foundIndex + " in our bakery.")
+// }else{
+//     alert("We are sorry, " + userInput + " is not available in our list.");
+// }
+
+
+// let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+// let uerInput = prompt(`Welcome to ABC Bakery. What do you want to order sir/ma'am?
+//      1. cake
+//      2.apple pie 
+//      3.cookie
+//      4.chips
+//     5.patties `);
+//     let searchItem=uerInput.toLowerCase();
+
+
+//     let itemFound=-1
+
+//     for (let i=0; i<A.length; i++){
+//         if (searchItem ==A[i].toLowerCase()){
+//           itemFound = i;
+//           break;
+//         }
+//     }
+
+//     if (itemFound !== -1 ){
+//   alert(uerInput + " is available at index " +  itemFound + " in our bakery")
+//     }else {
+//         alert("We are sorry, " + uerInput + " is not available in our list.");
+//     }
+
+
+
+// ________________________________________________________________
+
+// 15. Write a program to take password as an input from 
+// user. The password must qualify these requirements: 
+// a. It should contain alphabets and numbers 
+// b. It should not start with a number 
+// c. It must at least 6 characters long 
+// If the password does not meet above requirements, 
+// prompt the user to enter a valid password. 
+// For character codes of a-z, A-Z & 0-9, refer to ASCII 
+// table at the end of this document.
+
+// let password = prompt("Enter your password:");
+
+// let hasAlphabet = false;
+// let hasNumber = false;
+// let isFirstCharNumber = false;
+
+// // 1. Length Check
+// if (password.length < 6) {
+//     alert("Password must be at least 6 characters long.");
+// } else {
+//     // 2. Start character check (ASCII 48-57 are numbers '0'-'9')
+//     let firstChar = password.charCodeAt(0);
+//     if (firstChar >= 48 && firstChar <= 57) {
+//         isFirstCharNumber = true;
+//     }
+
+//     if (isFirstCharNumber) {
+//         alert("Password should not start with a number.");
+//     } else {
+//         // 3. Loop through to check alphabets and numbers
+//         for (let i = 0; i < password.length; i++) {
+//             let code = password.charCodeAt(i);
+
+//             // Check for Alphabets (A-Z: 65-90, a-z: 97-122)
+//             if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+//                 hasAlphabet = true;
+//             }
+//             // Check for Numbers (0-9: 48-57)
+//             else if (code >= 48 && code <= 57) {
+//                 hasNumber = true;
+//             }
+//         }
+
+//         if (hasAlphabet && hasNumber) {
+//             hasAlphabet && hasNumber
+// }
+
+
+// ________________________________________________________________________________
+// let password=prompt("Enter Password");
+
+// let hasAlphabet = false;
+// let hasNumber = false;
+// let isFirstCharNumber = false;
+
+// if(password.length < 6){
+//  alert("Password must be 6 characters long");
+
+// }
+// else {
+//  let firstchar = password.charCodeAt(0)
+//  if (firstchar >= 48 && firstchar <= 57){
+//     isFirstCharNumber = true;
+//  }
+// }
+// if(isFirstCharNumber){
+// alert("Password should not start with a number.");
+// }else {
+
+//     for (let i = 0; i < password.length; i++){
+//       let code=password.charCodeAt(i);
+//       if((code >= 65 && code <= 90) || (code >= 97 && code <= 122)){
+//      hasAlphabet = true;
+//       }
+//        else if (code >= 48 && code <= 57) {
+//                  hasNumber = true;
+//     }
+//     }
+// }
+
+// if(hasAlphabet && hasNumber){
+//  alert("your password is valid");
+// } else {
+//     alert("your password must contain alphabets and numbers")
+// }
+
+
+
+
+// _________________________________________________________________________________
+
+// 16. Write a program to convert the following string to an 
+// array using string split method. 
+// var university = “University of Karachi”; 
+// Display the elements of array in your browser.
+
+// let str = "University Of Karachi";
+// let split =str.split("");
+
+
+// for(let i=0; i<split.length ; i++){
+// document.writeln(split[i] + "<br>")
+// }
+
+
+
+// 1. User se input lena
+let userInput = prompt("Enter any word:");
+
+// 2. Length check karna taaki khali input par error na aaye
+if (userInput.length > 0) {
+    // 3. Aakhri character nikalna (length - 1)
+    let lastChar = userInput[userInput.length - 1];
+    
+    alert("The last character of your input is: " + lastChar);
+} else {
+    alert("Please enter a valid word!");
 }
