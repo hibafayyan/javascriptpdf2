@@ -411,15 +411,36 @@
 
 
 
-// 1. User se input lena
-let userInput = prompt("Enter any word:");
+// // 1. User se input lena
+// let userInput = prompt("Enter any word:");
 
-// 2. Length check karna taaki khali input par error na aaye
-if (userInput.length > 0) {
-    // 3. Aakhri character nikalna (length - 1)
-    let lastChar = userInput[userInput.length - 1];
+// // 2. Length check karna taaki khali input par error na aaye
+// if (userInput.length > 0) {
+//     // 3. Aakhri character nikalna (length - 1)
+//     let lastChar = userInput[userInput.length - 1];
     
-    alert("The last character of your input is: " + lastChar);
-} else {
-    alert("Please enter a valid word!");
+//     alert("The last character of your input is: " + lastChar);
+// } else {
+//     alert("Please enter a valid word!");
+// }
+
+
+// 18. You have a string “The quick brown fox jumps over the
+// lazy dog”. Write a program to count number of
+// occurrences of word “the” in given string
+
+
+
+let str="The quick brown fox jumps over the lazy dog";
+let lowerStr =str.toLowerCase();
+ let words=lowerStr.split(" ");
+
+ let count=0;
+
+ for (let i=0;i <words.length; i++){
+       if(words[i] == "the"){
+       count++;
+ }
 }
+ document.writeln("The word 'the appears " + count +" times in the given sentence");
+
