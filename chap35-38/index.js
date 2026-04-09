@@ -176,17 +176,201 @@ setInterval(displayDateTime,1000);
 // 7. Write a function that take start and end number as inputs
 // & display counting in your browser
 
-let start = Number(prompt("Enter start number"));
-let end = Number(prompt("Enter end number"));
+// let start = Number(prompt("Enter start number"));
+// let end =  Number(prompt("Enter end number"));
 
-function displayCounting (s,e){
-  result=" "
+// function displayCounting (s,e){
+//   result=" "
  
-  for (let i=s ; i<=e ; i++ ){
-  result +=i + " "
-}
- return result
+//   for (let i=s ; i<=e ; i++ ){
+//   result +=i + " "
+// }
+//  return result
 
+// }
+
+// alert(displayCounting(start,end))
+
+// _________________________________________________________
+
+// 8. Write a nested function that computes hypotenuse of a
+// right angle triangle.
+// Hypotenuse2 = Base2 + Perpendicular2
+// function | JAVASCRIPT
+// Page 2 of 4
+// Take base and perpendicular as inputs.
+// Outer function : calculateHypotenuse()
+// Inner function: calculateSquare()
+
+
+// function calculateHypotenuse(base, perpendicular){
+
+// function calculateSquare(num) {
+//   return num*num;
+// }
+// let baseSquare = calculateSquare(base);
+//     let perpendicularSquare = calculateSquare(perpendicular);
+//     let sum = baseSquare + perpendicularSquare;
+
+//     let hypotenuse = Math.sqrt(sum);
+//       return hypotenuse;
+
+
+
+// }
+
+// let result = calculateHypotenuse(3, 4);
+// console.log(result);
+
+// _________________________________________________________
+
+// 9. Write a function that calculates the area of a rectangle.
+//  A = width * height
+//  Pass width and height in following manner:
+// i. Arguments as value
+// ii. Arguments as variables
+
+
+// function calculateArea(w,h){
+//   return w*h
+// }
+// let area1=calculateArea(5,4)
+// console.log(area1);
+
+
+// let width=5;
+// let height=7;
+
+// function calculateArea (w,h){
+//  return w*h
+// }
+
+// console.log(calculateArea(width,height));
+
+// ____________________________________________________
+
+// 10. Write a JavaScript function that checks whether a passed
+// string is palindrome or not?
+// A palindrome is word, phrase, or sequence that reads the same backward as
+// forward, e.g., madam.
+
+// function isPalindrome (str){
+//   let lowerStr=str.toLowerCase();
+//   let reversedStr=lowerStr.split('').reverse().join('')
+
+//   // condition
+
+//   if (lowerStr === reversedStr ){
+//   return true;
+//   }else {
+//     return false;
+//   }
+// }
+
+// console.log(isPalindrome("madam"));
+// console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("hello"));
+
+// __________________________________________________
+
+
+// 11. Write a JavaScript function that accepts a string as a
+// parameter and converts the first letter of each word of the
+// string in upper case.
+// EXAMPLE STRING : 'the quick brown fox'
+// EXPECTED OUTPUT : 'The Quick Brown Fox'
+
+
+// function toTitleCase(str){
+
+// let words=str.split(' ')
+
+// for (let i=0 ; i < words.length ; i++){
+//   words[i]=words[i][0].toUpperCase() +  words[i].substring(1).toLowerCase()
+// }
+
+// return words.join(' ')
+
+// }
+
+
+// let example = 'the quick brown fox';
+
+// console.log(toTitleCase(example));
+
+// ________________________________________________________
+
+// 12. Write a JavaScript function that accepts a string as a
+// parameter and find the longest word within the string.
+// EXAMPLE STRING : 'Web Development Tutorial'
+// EXPECTED OUTPUT : 'Development'
+
+// function longestWord (str){
+// let words=str.split(' '); 
+
+// let longest="";
+
+// for (let i=0; i < words.length ; i++ ){
+//   if (words[i].length>longest.length){
+//         longest=words[i]
+//   }
+ 
+// }
+// return longest;
+
+// }
+// let example = 'Web Development Tutorial';
+// console.log(longestWord(example));
+
+// 13. Write a JavaScript function that accepts two arguments, a
+// string and a letter and the function will count the number of
+// occurrences of the specified letter within the string.
+// Sample arguments : 'JSResourceS.com', 'o'
+
+
+// function countLetter(str, letter){
+// let count=0;
+
+// for(let i=0 ; i<str.length ; i++){
+//     if( str[i] === letter){
+//       count++
+//     }
+// }
+// return count
+
+// }
+
+// console.log(countLetter('JSResourceS.com','o'));
+
+// ____________________________________________________________
+
+// 14. The Geometrizer
+// Create 2 functions that calculate properties of a circle, using
+// the definitions here.
+// Create a function called calcCircumference:
+// • Pass the radius to the function.
+// • Calculate the circumference based on the radius, and output
+// "The circumference is NN".
+// Create a function called calcArea:
+// • Pass the radius to the function.
+// • Calculate the area based on the radius, and output "The area
+// is NN".
+// Circumference of circle = 2πr
+// Area of circle = πr2
+
+function calcCircumference(radius){
+  let circumference = 2*Math.PI*radius;
+  return circumference
+  
 }
 
-alert(displayCounting(start,end))
+console.log(calcCircumference(7));
+
+
+function calcArea(radius){
+  let area = Math.PI*radius*radius;
+  return area
+  
+}
+
+console.log(calcArea(7));
